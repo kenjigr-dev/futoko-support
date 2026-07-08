@@ -121,7 +121,7 @@ def ask_claude(api_key: str, user_message: str) -> dict:
     client = Anthropic(api_key=api_key)
     resp = client.messages.create(
         model=MODEL,
-        max_tokens=1500,
+        max_tokens=2500,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_message}],
     )
